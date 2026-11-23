@@ -75,8 +75,8 @@ Attending the “Buildrathon Kickoff: Code the Future with CMC Global” worksho
 ### Event Photos
 
 #### 1. Check-in Photo with Speakers and Students
-![Buildrathon Kickoff Check-in at 26th Floor Bitexco](../../images/4-Event/event1-buildrathon.jpg)
-*Figure 1: Nguyen Ngoc Tan (3rd person from the left in white sweater, highlighted in the yellow box) check-in photo with speakers and students at the Buildrathon Kickoff event (26th Floor, Bitexco).*
+![Buildrathon Kickoff Check-in at 26th Floor Bitexco](../../images/4-Event/event1-buildrathon-checkin.jpg)
+*Figure 1: Nguyen Ngoc Tan (3rd person from the left in white sweater, highlighted with yellow box on face) check-in photo with speakers and students at the Buildrathon Kickoff event (26th Floor, Bitexco).*
 
 #### 2. Event Feedback Submission Confirmation
 ![Buildrathon Kickoff Feedback Confirmation](../../images/4-Event/event1-feedback.jpg)

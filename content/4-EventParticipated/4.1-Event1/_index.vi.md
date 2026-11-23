@@ -75,8 +75,8 @@ pre: " <b> 4.1. </b> "
 ### Hình ảnh sự kiện
 
 #### 1. Ảnh check-in cùng diễn giả và các bạn sinh viên
-![Ảnh check-in Buildrathon Kickoff tại Tầng 26 Bitexco](../../../images/4-Event/event1-buildrathon.jpg)
-*Hình 1: Nguyễn Ngọc Tân (người mặc áo trắng thứ 3 từ bên trái đếm qua, trong khung viền vàng) chụp ảnh check-in cùng diễn giả và các bạn sinh viên tại sự kiện Buildrathon Kickoff (Tầng 26 Bitexco).*
+![Ảnh check-in Buildrathon Kickoff tại Tầng 26 Bitexco](../../../images/4-Event/event1-buildrathon-checkin.jpg)
+*Hình 1: Nguyễn Ngọc Tân (người mặc áo trắng thứ 3 từ bên trái đếm qua, trong khung viền vàng trên khuôn mặt) chụp ảnh check-in cùng diễn giả và các bạn sinh viên tại sự kiện Buildrathon Kickoff (Tầng 26 Bitexco).*
 
 #### 2. Xác nhận phản hồi sự kiện
 ![Xác nhận gửi phản hồi Buildrathon Kickoff](../../../images/4-Event/event1-feedback.jpg)
