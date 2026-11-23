@@ -6,25 +6,21 @@ chapter: false
 pre: " <b> 4. </b> "
 ---
 
-Trong kỳ thực tập, em tham gia tối thiểu 3 sự kiện chuyên môn / cộng đồng. Mỗi trang sự kiện gồm tên sự kiện, thời gian, địa điểm, vai trò, nội dung tiếp thu, ảnh check-in và bài học rút ra.
+Trong kỳ thực tập tại AWS Việt Nam, em tích cực tham gia các sự kiện công nghệ và hoạt động cộng đồng. Mỗi bài thu hoạch gồm thông tin chi tiết, mục tiêu, bài học rút ra, ảnh check-in và ứng dụng thực tế.
 
-### [Event 1](4.1-event1/)
-&emsp;**Tên sự kiện:** AWS Cloud and AI Day Hanoi 2026
+### [Event 1: AWS Cloud and AI Day Hanoi 2026](4.1-event1/)
+&emsp;**Thời gian:** 07:30 – 17:00, Thứ Ba ngày 29/09/2026
 
-&emsp;**Thời gian:** 07:30 – 17:00, ngày 29/09/2026
-
-&emsp;**Địa điểm:** Khách sạn JW Marriott Hà Nội (em tham gia qua HCMC Watch Party tại văn phòng AWS Việt Nam, TP. Hồ Chí Minh)
+&emsp;**Địa điểm:** Khách sạn JW Marriott Hà Nội (em tham dự qua HCMC Watch Party tại văn phòng AWS Việt Nam, TP. Hồ Chí Minh)
 
 &emsp;**Vai trò:** Người tham dự
 
 ---
 
-### [Event 2](4.2-event2/)
-&emsp;**Tên sự kiện:** FCAJ Community Day
+### [Event 2: FCAJ x FPTU: Cloud Mastery 1](4.2-event2/)
+&emsp;**Thời gian:** 09:00 – 12:00, Thứ Bảy ngày 14/11/2026
 
-&emsp;**Thời gian:** 09:00 – 12:00, ngày 31/10/2026
-
-&emsp;**Địa điểm:** Văn phòng AWS Việt Nam, Bitexco Financial Tower, 2 Hải Triều, Phường Sài Gòn, TP. Hồ Chí Minh
+&emsp;**Địa điểm:** Tầng 26, Tòa nhà Bitexco Financial Tower, TP. Hồ Chí Minh (Văn phòng AWS Việt Nam)
 
 &emsp;**Vai trò:** Người tham dự
 

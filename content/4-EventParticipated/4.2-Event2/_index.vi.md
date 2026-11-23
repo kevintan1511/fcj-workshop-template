@@ -1,85 +1,71 @@
 ---
 title: "Event 2"
-date: 2026-10-31
+date: 2026-11-14
 weight: 2
 chapter: false
 pre: " <b> 4.2. </b> "
 ---
 
-# Bài thu hoạch "FCAJ Community Day"
+# Bài thu hoạch: "FCAJ x FPTU: Cloud Mastery 1"
 
-### Thông Tin Sự Kiện
+### Thông tin sự kiện
 
-- **Tên sự kiện:** FCAJ Community Day
-- **Thời gian:** Thứ Bảy, 31/10/2026, 09:00 – 12:00
-- **Địa điểm:** Văn phòng AWS Việt Nam, Bitexco Financial Tower, 2 Hải Triều, Phường Sài Gòn, TP. Hồ Chí Minh
-- **Vai trò:** Người tham dự (Attendee)
-- **Trang sự kiện:** <https://luma.com/1izeyind>
+- **Tên sự kiện:** FCAJ x FPTU: Cloud Mastery 1
+- **Thời gian:** Thứ Bảy, 14/11/2026 (09:00 – 12:00)
+- **Địa điểm:** Tầng 26, Tòa nhà Bitexco Financial Tower, Số 2 Hải Triều, Bến Nghé, Quận 1, TP. Hồ Chí Minh (Văn phòng AWS Việt Nam)
+- **Đơn vị tổ chức:** Sự kiện kết hợp giữa First Cloud AI Journey (FCAJ) và Trường Đại học FPT (FPTU)
+- **Hình thức đăng ký:** Đăng ký trực tiếp qua cổng thông tin sinh viên FPTU Portal
+- **Vai trò:** Người tham dự (Attendee) / Sinh viên & Thực tập sinh FPTU
 
-### Mục Đích Của Sự Kiện
+### Mục đích của sự kiện
 
-- Chia sẻ kinh nghiệm thực tế khi xây dựng phần mềm và sử dụng dịch vụ AWS
-- Giúp sinh viên hiểu ngành cloud cần gì và cần chuẩn bị ra sao
-- Giới thiệu cách mới để xây dựng hệ thống serverless và bất đồng bộ trên AWS
-- Khuyến khích thực tập sinh đóng góp mã nguồn mở và học hỏi từ cộng đồng
+- Tạo không gian kết nối, giao lưu và chia sẻ kiến thức điện toán đám mây (Cloud Computing) dành riêng cho các bạn sinh viên FPT.
+- Cập nhật các kiến thức thực tế về kiến trúc Cloud và ứng dụng Enterprise AI trong môi trường doanh nghiệp.
+- Định hướng nghề nghiệp, giải đáp các thắc mắc về lộ trình phát triển và các kỹ năng chuyên môn cần thiết khi làm việc trong ngành Cloud/AI.
+- Tạo sân chơi giao lưu gắn kết thông qua minigame Quiz kiến thức công nghệ và giới thiệu các sự kiện cộng đồng tiếp theo (AWS Student Community Day Vietnam 2026).
 
-### Chương Trình
+### Nội dung và diễn biến sự kiện
 
-| Thời gian | Phiên |
-| --- | --- |
-| 09:00 – 09:25 | Lessons Learned from Building Software Factories |
-| 09:30 – 09:55 | Education |
-| 10:00 – 10:25 | AWS Lambda Web Functions: Rethinking Serverless Web Architecture |
-| 10:30 – 11:00 | Amazon SQS: Building Asynchronous Systems |
-| 11:00 – 11:25 | My 3-Month AWS Internship Journey |
-| 11:30 – 12:00 | Start & Maintain Consistency with Open Source Contributing |
+#### 1. Thông báo và công tác tổ chức
+Sự kiện là hoạt động chính thức dành cho sinh viên trường Đại học FPT tại văn phòng AWS Việt Nam (Tầng 26 Bitexco). Số lượng chỗ ưu tiên tại văn phòng có hạn và cổng đăng ký trên portal tự động đóng ngay khi nhận đủ lượt tham dự, thu hút sự hưởng ứng nhanh chóng từ các bạn sinh viên.
 
-### Nội Dung Nổi Bật
+#### 2. Không khí buổi chia sẻ tại văn phòng AWS
+Sáng thứ Bảy (14/11/2026), sự kiện đã diễn ra thành công tốt đẹp với sự tham gia của rất nhiều các bạn sinh viên trẻ đam mê công nghệ đến từ khắp nơi tại Sài Gòn. Văn phòng AWS hiện đại tạo điều kiện lý tưởng cho các hoạt động thảo luận và giao lưu trực tiếp.
 
-#### Lessons Learned from Building Software Factories
-- **Software factory** là một quy trình chuẩn, lặp lại được, giúp đội ngũ build, test và release phần mềm.
-- Diễn giả chia sẻ các sai lầm thường gặp cần tránh và những gì thật sự hiệu quả khi xây dựng ở quy mô lớn.
+#### 3. Phiên trao đổi hỏi đáp (Q&A) "Không có hồi kết"
+Đặc biệt trong buổi chia sẻ là phần trao đổi hỏi đáp mà theo em là *"Không có hồi kết"*, với những câu hỏi rất thực tế và hay của các bạn sinh viên:
+- Từ các thắc mắc về định hướng nghề nghiệp, kỹ năng thực tập cho đến các câu hỏi chuyên môn sâu về Cloud, Serverless và triển khai mô hình AI.
+- Các diễn giả và chuyên gia AWS đã giải đáp chi tiết, chia sẻ nhiều kinh nghiệm thực tiễn quý giá từ các dự án thực tế.
 
-#### Education
-- Góc nhìn của nhà giáo dục về việc chuẩn bị nguồn nhân lực cloud thế hệ mới.
-- Sinh viên cần chuẩn bị gì trước khi vào ngành, và cách thu hẹp khoảng cách giữa trường đại học với công việc thực tế.
+#### 4. Minigame Quiz cuối buổi sôi nổi
+Bên cạnh phần chia sẻ lý thuyết và thảo luận, phần game Quiz trên nền tảng trực tuyến ở cuối buổi cũng được toàn thể hội trường hưởng ứng rất nồng nhiệt. Các câu hỏi tình huống thực tế (như đặc trưng phân biệt giữa Enterprise AI và Academic AI) giúp sinh viên củng cố kiến thức một cách hào hứng.
 
-#### AWS Lambda Web Functions: Rethinking Serverless Web Architecture
-- Lambda giờ có thể phục vụ web request bằng **HTTP gốc (native HTTP)** và xử lý **tối đa 128 request cùng lúc** trong một function, thay đổi cách nghĩ về ứng dụng web serverless.
-- Không cần lớp adapter trung gian, và **Active CPU Billing** (chỉ trả tiền cho thời gian CPU thật sự làm việc) giúp giảm chi phí.
-- Phiên so sánh serverless với **Docker trên EC2/ECS** bằng benchmark (đo hiệu năng) thực tế.
+#### 5. Bật mí sự kiện sắp tới
+Ban tổ chức cũng hé lộ thông tin về sự kiện tiếp theo: cuối tuần này sẽ có một buổi Workshop chia sẻ về Cloud dành cho sinh viên với chủ đề **AWS Student Community Day Vietnam 2026**.
 
-#### Amazon SQS: Building Asynchronous Systems
-- Hệ thống hiện đại cần **xử lý bất đồng bộ** (công việc được đưa vào hàng đợi và xử lý sau) để một phần chạy chậm không làm nghẽn cả hệ thống.
-- **Amazon SQS** (hàng đợi tin nhắn được quản lý) giúp **tách rời (decouple)** các thành phần và mở rộng từng phần độc lập.
-- Các mẫu thiết kế và mẹo thực tế, ví dụ dùng **Dead-Letter Queue (DLQ)** để giữ lại các tin nhắn bị lỗi nhiều lần.
+### Bài học rút ra
 
-#### My 3-Month AWS Internship Journey
-- Một bạn thực tập sinh khóa trước chia sẻ cách áp dụng dịch vụ AWS vào dự án thực tế trong 3 tháng.
-- Bài học và lời khuyên cho những bạn mới bắt đầu thực tập.
+- **Thực tế doanh nghiệp so với học thuật:** Enterprise AI đòi hỏi giải quyết các bài toán kinh doanh cụ thể, xử lý dữ liệu biến đổi liên tục và đảm bảo tính sẵn sàng, bảo mật ở quy mô lớn thay vì chỉ đo độ chính xác trên tập benchmark cố định.
+- **Giá trị của việc giao lưu cộng đồng:** Tham gia các sự kiện trực tiếp tại văn phòng AWS giúp mở rộng tầm nhìn, kết nối với các bạn sinh viên cùng chí hướng và hiểu rõ hơn về kỳ vọng của doanh nghiệp công nghệ hàng đầu.
+- **Tinh thần chủ động học hỏi:** Việc tích cực đặt câu hỏi và tham gia thảo luận trong các buổi meetup giúp giải quyết các nút thắt kiến thức mà việc tự học đơn lẻ khó đạt được.
 
-#### Start & Maintain Consistency with Open Source Contributing
-- Cách đóng góp mã nguồn mở lần đầu từ con số 0.
-- Cách xây dựng thói quen đóng góp đều đặn, giữ động lực, và lợi ích cho kỹ năng lẫn sự nghiệp.
+### Ứng dụng vào công việc và dự án thực tập
 
-### Bài Học Rút Ra
+- Vận dụng các kiến thức về kiến trúc Enterprise AI và dịch vụ AWS vào việc hoàn thiện dự án **ImageGuard** của nhóm: kiểm soát luồng xử lý ảnh qua S3 Events, Lambda, Rekognition, tối ưu chi phí và bảo mật.
+- Chuẩn bị kế hoạch tham gia tích cực vào sự kiện **AWS Student Community Day Vietnam 2026** sắp tới.
 
-- Serverless không còn chỉ dành cho các function nhỏ; nó có thể là lựa chọn thật cho ứng dụng web, nhưng nên quyết định dựa trên **dữ liệu chi phí và hiệu năng**, không theo thói quen.
-- Đặt **hàng đợi (SQS)** giữa các bước giúp hệ thống tin cậy hơn: nếu một bước lỗi, tin nhắn nằm chờ trong hàng đợi thay vì bị mất.
-- Kỳ thực tập rất ngắn. Học đều mỗi ngày và làm một dự án thật quan trọng hơn đọc thật nhiều lý thuyết.
+---
 
-### Ứng Dụng Vào Công Việc
+### Hình ảnh sự kiện
 
-- Cân nhắc thêm **Amazon SQS** giữa bước upload và bước xử lý (Lambda) trong Workshop cuối kỳ của nhóm, kèm DLQ cho các tác vụ lỗi.
-- Khi chọn giữa Lambda và container cho workshop, so sánh chi phí bằng **AWS Pricing Calculator** trước khi quyết định.
-- Làm theo lời khuyên từ phiên chia sẻ thực tập: cập nhật worklog trung thực mỗi tuần và thực hành lab thay vì chỉ đọc.
+#### 1. Ảnh check-in sự kiện
+![Ảnh check-in Cloud Mastery 1 tại Tầng 26 Bitexco](../../../images/4-Event/event2-checkin.jpg)
+*Hình 1: Nguyễn Ngọc Tân (người trong khung viền vàng bên phải) cùng các bạn sinh viên tham dự sự kiện Cloud Mastery 1 tại Tầng 26, Tòa nhà Bitexco (Văn phòng AWS Việt Nam).*
 
-### Trải Nghiệm Sự Kiện
+#### 2. Minigame Quiz kiến thức Cloud & Enterprise AI
+![Minigame Quiz Enterprise AI](../../../images/4-Event/event2-quiz.jpg)
+*Hình 2: Câu hỏi minigame Quiz trong chương trình: Phân biệt đặc trưng Enterprise AI và Academic AI.*
 
-Sự kiện này rất gần với hoàn cảnh của em khi đang thực tập. Phần chia sẻ của bạn thực tập sinh khóa trước giúp em thấy rõ 3 tháng thực tập có thể đạt được những gì, còn hai phiên về Lambda và SQS liên quan trực tiếp tới các dịch vụ nhóm em có thể dùng trong workshop. Em cũng nhận ra đóng góp mã nguồn mở là việc có thể bắt đầu từ những bước nhỏ.
-
-#### Ảnh check-in
-
-![Check-in tại FCAJ Community Day](../../../images/4-Event/event2-checkin.jpg)
-
-*Em là người trong khung đỏ.*
+#### 3. Xác nhận đăng ký và phản hồi sự kiện
+![Xác nhận hoàn thành FCAJ x FPTU: Cloud Mastery 1](../../../images/4-Event/event2-feedback.jpg)
+*Hình 3: Ghi nhận phản hồi và đánh giá sau sự kiện qua biểu mẫu FCAJ x FPTU: Cloud Mastery 1.*

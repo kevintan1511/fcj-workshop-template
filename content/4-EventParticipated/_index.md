@@ -6,25 +6,21 @@ chapter: false
 pre: " <b> 4. </b> "
 ---
 
-During my internship, I take part in at least 3 professional / community events. Each event page includes the event name, time, location, my role, key takeaways, a check-in photo and lessons learned.
+During my internship at AWS Vietnam, I actively take part in technical and community events. Each event summary includes the event details, objectives, key takeaways, check-in photos, and practical applications.
 
-### [Event 1](4.1-event1/)
-&emsp;**Event Name:** AWS Cloud and AI Day Hanoi 2026
+### [Event 1: AWS Cloud and AI Day Hanoi 2026](4.1-event1/)
+&emsp;**Date & Time:** 07:30 – 17:00, Tuesday 29/09/2026
 
-&emsp;**Date & Time:** 07:30 – 17:00, 29/09/2026
-
-&emsp;**Location:** JW Marriott Hotel Hanoi (attended via the HCMC Watch Party at the AWS Vietnam office, Ho Chi Minh City)
+&emsp;**Location:** JW Marriott Hotel Hanoi (attended via HCMC Watch Party at the AWS Vietnam Office, Ho Chi Minh City)
 
 &emsp;**Role:** Attendee
 
 ---
 
-### [Event 2](4.2-event2/)
-&emsp;**Event Name:** FCAJ Community Day
+### [Event 2: FCAJ x FPTU: Cloud Mastery 1](4.2-event2/)
+&emsp;**Date & Time:** 09:00 – 12:00, Saturday 14/11/2026
 
-&emsp;**Date & Time:** 09:00 – 12:00, 31/10/2026
-
-&emsp;**Location:** AWS Vietnam office, Bitexco Financial Tower, 2 Hai Trieu Street, Sai Gon Ward, Ho Chi Minh City
+&emsp;**Location:** 26th Floor, Bitexco Financial Tower, Ho Chi Minh City (AWS Vietnam Office)
 
 &emsp;**Role:** Attendee
 
