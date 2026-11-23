@@ -1,15 +1,34 @@
 ---
 title: "Events Participated"
-date: 2024-01-01
+date: 2026-09-14
 weight: 4
 chapter: false
 pre: " <b> 4. </b> "
 ---
 
-### Events Participated
+During my internship, I take part in at least 3 professional / community events. Each event page includes the event name, time, location, my role, key takeaways, a check-in photo and lessons learned.
 
-During the internship at AWS Vietnam, I actively participated in community events, technical workshops, and conferences:
+### [Event 1](4.1-event1/)
+&emsp;**Event Name:** AWS Cloud and AI Day Hanoi 2026
 
-1. [Event 1: AWS Cloud and AI Day Hanoi 2026 (HCMC Watch Party)](4.1-event1/)
-2. [Event 2: Ongoing](4.2-event2/)
-3. [Event 3: Ongoing](4.3-event3/)
+&emsp;**Date & Time:** 07:30 – 17:00, 29/09/2026
+
+&emsp;**Location:** JW Marriott Hotel Hanoi (attended via the HCMC Watch Party at the AWS Vietnam office, Ho Chi Minh City)
+
+&emsp;**Role:** Attendee
+
+---
+
+### [Event 2](4.2-event2/)
+&emsp;**Event Name:** FCAJ Community Day
+
+&emsp;**Date & Time:** 09:00 – 12:00, 31/10/2026
+
+&emsp;**Location:** AWS Vietnam office, Bitexco Financial Tower, 2 Hai Trieu Street, Sai Gon Ward, Ho Chi Minh City
+
+&emsp;**Role:** Attendee
+
+---
+
+### [Event 3](4.3-event3/)
+&emsp;Ongoing

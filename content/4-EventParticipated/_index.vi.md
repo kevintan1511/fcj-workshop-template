@@ -1,15 +1,34 @@
 ---
-title: "Các sự kiện đã tham gia"
-date: 2024-01-01
+title: "Các events đã tham gia"
+date: 2026-09-14
 weight: 4
 chapter: false
 pre: " <b> 4. </b> "
 ---
 
-### Các sự kiện đã tham gia
+Trong kỳ thực tập, em tham gia tối thiểu 3 sự kiện chuyên môn / cộng đồng. Mỗi trang sự kiện gồm tên sự kiện, thời gian, địa điểm, vai trò, nội dung tiếp thu, ảnh check-in và bài học rút ra.
 
-Trong thời gian thực tập tại AWS Việt Nam, tôi đã tích cực tham gia các sự kiện cộng đồng, hội thảo kỹ thuật và ngày hội công nghệ:
+### [Event 1](4.1-event1/)
+&emsp;**Tên sự kiện:** AWS Cloud and AI Day Hanoi 2026
 
-1. [Sự kiện 1: AWS Cloud and AI Day Hanoi 2026 (HCMC Watch Party)](4.1-event1/)
-2. [Sự kiện 2: Đang cập nhật](4.2-event2/)
-3. [Sự kiện 3: Đang cập nhật](4.3-event3/)
+&emsp;**Thời gian:** 07:30 – 17:00, ngày 29/09/2026
+
+&emsp;**Địa điểm:** Khách sạn JW Marriott Hà Nội (em tham gia qua HCMC Watch Party tại văn phòng AWS Việt Nam, TP. Hồ Chí Minh)
+
+&emsp;**Vai trò:** Người tham dự
+
+---
+
+### [Event 2](4.2-event2/)
+&emsp;**Tên sự kiện:** FCAJ Community Day
+
+&emsp;**Thời gian:** 09:00 – 12:00, ngày 31/10/2026
+
+&emsp;**Địa điểm:** Văn phòng AWS Việt Nam, Bitexco Financial Tower, 2 Hải Triều, Phường Sài Gòn, TP. Hồ Chí Minh
+
+&emsp;**Vai trò:** Người tham dự
+
+---
+
+### [Event 3](4.3-event3/)
+&emsp;Đang thực hiện
