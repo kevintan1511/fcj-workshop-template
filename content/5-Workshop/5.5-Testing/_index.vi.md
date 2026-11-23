@@ -1,59 +1,75 @@
 ---
 title: "Kiểm thử và xử lý sự cố"
-date: 2024-01-01
+date: 2026-11-20
 weight: 5
 chapter: false
 pre: " <b> 5.5. </b> "
 ---
 
-# Kiểm thử và xử lý sự cố
+## Kiểm thử chức năng
 
-## Functional tests
-| Test | How | Result |
-| --- | --- | --- |
-| Valid image | Upload a beer image via the website | `APPROVED`, labels Alcohol · Beer · Bottle…, shown in the gallery |
-| Violating image | Upload the wooden toy gun | `REJECTED`, `blockedCategories = Violence`, the admin gets an email |
-| Real user | Check DynamoDB | `userId` is the Cognito `sub` UUID, not an email |
-| Idempotency | Overwrite the same key | Log `item_missing_or_already_processed`, status unchanged |
-| Unknown key | Upload a file with no PENDING item | No new item, no email |
-| DLQ | Set a wrong `TABLE_NAME`, invoke asynchronously | After 2 retries the DLQ holds a `RetriesExhausted` message, `approximateInvokeCount: 3` |
-> 📷 **Screenshot placeholder:** *Gallery: APPROVED and REJECTED images*
+| Test | Cách làm | Kết quả |
+|---|---|---|
+| Ảnh hợp lệ | Upload ảnh bia qua web | `APPROVED`, nhãn Alcohol · Beer · Bottle…, hiện ảnh trong gallery |
+| Ảnh vi phạm | Upload ảnh súng gỗ | `REJECTED`, `blockedCategories = Violence`, admin nhận email |
+| Người dùng thật | Xem DynamoDB | `userId` là UUID `sub` của Cognito, không phải email |
+| Idempotent | Upload đè cùng key | Log `item_missing_or_already_processed`, trạng thái không đổi |
+| Key lạ | Upload file không có item PENDING | Không tạo item mới, không gửi email |
+| DLQ | Đổi `TABLE_NAME` sai rồi gọi Lambda bất đồng bộ | Sau 2 lần retry, DLQ có message `RetriesExhausted`, `approximateInvokeCount: 3` |
 
-**False positive:** a wooden toy gun is detected as *Violence/Weapons* with ~97% confidence. Improvements: raise `MIN_MODERATION_CONFIDENCE` for specific categories, or add an admin review step for `REJECTED` images.
-The DLQ test also proves **least privilege**: the error in the DLQ is `AccessDeniedException … not authorized to perform: dynamodb:UpdateItem on resource: …table/khong-ton-tai`. IAM blocks it immediately because the role can only write to `imageguard-images`.
-> 📷 **Screenshot placeholder:** *DLQ message: RetriesExhausted*
+![Gallery: ảnh APPROVED và REJECTED](../../../images/5-workshop/26-3-web-gallery.png)
 
-## Security tests
-| Test | Expected | Actual |
-| --- | --- | --- |
-| `GET /images` without a token | 401 Unauthorized | ✅ `{"message":"Unauthorized"}` |
-| Open a web-bucket file directly | 403 AccessDenied | ✅ only CloudFront can read it (OAC) |
-| Open an image Object URL directly | 403 AccessDenied | ✅ |
-| Open a presigned URL after 6 minutes | Request has expired | ✅ |
-| `http://` | Redirects to `https://` | ✅ |
-| Response headers | HSTS, X-Frame-Options, X-Content-Type-Options, Referrer-Policy | ✅ |
-| Sign-in | URL contains `code_challenge_method=S256` (PKCE) | ✅ |
-> 📷 **Screenshot placeholder:** *API without a token returns 401*
+{{% notice note %}}
+**False positive:** súng đồ chơi bằng gỗ bị nhận là *Violence/Weapons* với độ tin cậy ~97%. Hướng cải thiện: tăng `MIN_MODERATION_CONFIDENCE` cho danh mục cụ thể, hoặc thêm bước quản trị viên duyệt lại ảnh `REJECTED`.
+{{% /notice %}}
 
-> 📷 **Screenshot placeholder:** *Direct S3 access is denied*
+Bài test DLQ còn cho thấy **least privilege** hoạt động: lỗi trong DLQ là `AccessDeniedException … not authorized to perform: dynamodb:UpdateItem on resource: …table/khong-ton-tai`. IAM chặn ngay vì role chỉ được ghi đúng bảng `imageguard-images`.
 
-The site is served from CloudFront’s **SGN (Ho Chi Minh City)** edge, so Vietnamese users get fast loads even though the backend runs in us-east-1.
-## Troubleshooting
-### 1. Inline policy: “The policy failed legacy parsing”
-**Cause:** a stray `>` after the Account ID in the DynamoDB ARN (`…:123456789012>:table/…`), so the Review page listed only 5 of 6 services. **Fix:** the Account ID must be 12 digits with no dashes and no `<` `>`; use Find & Replace on `<ACCOUNT_ID>` before pasting.
-### 2. Alert email arrived but the item stayed PENDING
-**Cause:** at upload time the `img-002` item did not match, so the conditional `UpdateItem` was rejected; the first version of the code **published to SNS before** writing the DB, so the email still went out. **Lesson:** that design let “unknown” uploads spam the admin. **Fixed:** publish to SNS only after the DB stores `REJECTED`; if SNS fails, log an ERROR and emit `AlertPublishFailed` so an alarm catches it.
-> 📷 **Screenshot placeholder:** *Email arrived while the item was still PENDING*
+![Message trong DLQ: RetriesExhausted](../../../images/5-workshop/15-2b-dlq-message-body.jpg)
 
-### 3. Alarms sent no email
-**Symptom:** the alarm went to ALARM but no email arrived; the alarm history said *“Failed to execute action”*. **Cause:** the SNS topic was encrypted with the AWS managed key `alias/aws/sns`. CloudWatch Alarms cannot use that key (Lambda can, so REJECTED emails still arrived). **Fix:** disable topic encryption → history shows *“Successfully executed action”*. If encryption is mandatory, use a customer managed KMS key whose key policy allows `cloudwatch.amazonaws.com` (~USD 1/month). The email only contains `userId`/`imageId`, no image or image link.
-> 📷 **Screenshot placeholder:** *Failed to execute action*
+## Kiểm thử bảo mật
 
-> 📷 **Screenshot placeholder:** *Successfully executed action after the fix*
+| Test | Kết quả mong đợi | Thực tế |
+|---|---|---|
+| Gọi `GET /images` không có token | 401 Unauthorized | ✅ `{"message":"Unauthorized"}` |
+| Mở thẳng file trên bucket web | 403 AccessDenied | ✅ chỉ CloudFront đọc được (OAC) |
+| Mở thẳng Object URL của ảnh | 403 AccessDenied | ✅ |
+| Mở presigned URL sau 6 phút | Request has expired | ✅ |
+| `http://` | Tự chuyển `https://` | ✅ |
+| Response header | Có HSTS, X-Frame-Options, X-Content-Type-Options, Referrer-Policy | ✅ |
+| Đăng nhập | URL có `code_challenge_method=S256` (PKCE) | ✅ |
 
-### 4. The Console differs from older docs
-- New Lambda console: the role is under **Custom settings → Additional settings → Custom execution role**.
-- New CloudWatch console: **Log groups** is now **Logs → Log Management**; Logs Insights is **Log Analytics**.
-- A log stream shows only the last few lines: click **Load more** to see the `image_processed` line.
-### 5. Amazon Bedrock was not available
-The original idea used Amazon Nova Lite on Bedrock, but every team account had a quota of 0 and the increase request was denied. The team switched to **Amazon Rekognition**: no quota request needed, a ready-made moderation API, and per-image pricing that is easy to estimate.
+![API không có token trả 401](../../../images/5-workshop/27-1-api-no-token.jpg)
+
+![Truy cập thẳng S3 bị từ chối](../../../images/5-workshop/27-2-s3-web-direct-denied.jpg)
+
+Web được phục vụ từ edge **SGN (TP.HCM)** của CloudFront, nên người dùng Việt Nam vẫn tải nhanh dù backend ở us-east-1.
+
+## Xử lý sự cố đã gặp
+
+### 1. Inline policy báo "The policy failed legacy parsing"
+**Nguyên nhân:** thừa dấu `>` sau Account ID trong ARN DynamoDB (`…:125022369745>:table/…`), nên trang Review chỉ hiện 5/6 service.
+**Cách sửa:** Account ID phải là 12 số liền, không gạch ngang, không còn `<` `>`; dùng Find & Replace thay `<ACCOUNT_ID>` trước khi dán.
+
+### 2. Có email cảnh báo nhưng item vẫn PENDING
+**Nguyên nhân:** lúc upload, item `img-002` chưa khớp nên `UpdateItem` có điều kiện bị từ chối; bản code đầu **gửi SNS trước** khi ghi DB nên email vẫn đi.
+**Bài học:** thiết kế cũ cho phép ảnh "lạ" spam email quản trị viên. **Đã sửa:** chỉ gửi SNS khi DB đã ghi `REJECTED`; nếu SNS lỗi thì ghi log ERROR + metric `AlertPublishFailed` để alarm bắt.
+
+![Email đến dù item vẫn PENDING](../../../images/5-workshop/t-1-bug-email-before-update.png)
+
+### 3. Alarm không gửi email
+**Hiện tượng:** alarm chuyển ALARM nhưng không có email; lịch sử alarm ghi *"Failed to execute action"*.
+**Nguyên nhân:** SNS topic bật mã hóa bằng key AWS quản lý `alias/aws/sns`. CloudWatch Alarm không dùng được key này (Lambda thì dùng được, nên email REJECTED vẫn tới).
+**Cách sửa:** tắt mã hóa topic → lịch sử ghi *"Successfully executed action"*. Nếu bắt buộc mã hóa: dùng customer managed KMS key có key policy cho `cloudwatch.amazonaws.com` (~1 USD/tháng). Email chỉ chứa `userId`/`imageId`, không có ảnh hay link ảnh.
+
+![Failed to execute action](../../../images/5-workshop/28-3a-bug-sns-kms-failed.jpg)
+
+![Successfully executed action sau khi sửa](../../../images/5-workshop/28-3b-fix-sns-alarm-success.jpg)
+
+### 4. Giao diện Console khác tài liệu
+- Lambda mới: role đặt ở **Custom settings → Additional settings → Custom execution role**.
+- CloudWatch mới: **Log groups** đổi thành **Logs → Log Management**; Logs Insights thành **Log Analytics**.
+- Trang log stream chỉ hiện vài dòng cuối: bấm **Load more** để thấy dòng `image_processed`.
+
+### 5. Không dùng được Amazon Bedrock
+Đề tài ban đầu dùng Amazon Nova Lite trên Bedrock, nhưng quota của mọi tài khoản trong nhóm bằng 0 và yêu cầu tăng quota bị từ chối. Nhóm chuyển sang **Amazon Rekognition**: không cần quota, có sẵn API kiểm duyệt nội dung, giá theo ảnh dễ dự toán.

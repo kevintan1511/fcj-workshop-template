@@ -1,18 +1,22 @@
 ---
 title: "Clean-up"
-date: 2024-01-01
+date: 2026-11-20
 weight: 7
 chapter: false
 pre: " <b> 5.7. </b> "
 ---
 
-# Clean-up
-
 After grading, delete every resource to avoid charges. Follow this order because of dependencies (e.g. CloudFront must be disabled before deletion).
+
+{{% notice warning %}}
 Deletion **cannot be undone**. Download any images, logs or figures you need for the report first.
+{{% /notice %}}
+
 ## 1. CloudFront (first, takes ~10 minutes)
 **CloudFront → distribution `imageguard-web` → Disable** → wait for *Disabled* → **Delete**. Then delete the origin access control `imageguard-web-oac` (**Security → Origin access**).
+
 ## 2. Everything else with CloudShell
+
 ```bash
 ACC=$(aws sts get-caller-identity --query Account --output text)
 export AWS_REGION=us-east-1 AWS_PAGER=""
@@ -34,7 +38,7 @@ for f in process-image presign-upload get-images; do
   aws logs delete-log-group --log-group-name /aws/lambda/imageguard-$f
 done
 
-# 4. S3 (empty the buckets, then delete them)
+# 4. S3 (xoa het object roi xoa bucket / empty then delete)
 aws s3 rb s3://imageguard-images-$ACC --force
 aws s3 rb s3://imageguard-web-$ACC --force
 
@@ -43,7 +47,7 @@ aws dynamodb delete-table --table-name imageguard-images
 aws sns delete-topic --topic-arn arn:aws:sns:us-east-1:$ACC:imageguard-alerts
 aws sqs delete-queue --queue-url https://sqs.us-east-1.amazonaws.com/$ACC/imageguard-process-dlq
 
-# 6. IAM roles (delete the inline policy first)
+# 6. IAM roles (xoa inline policy truoc / delete inline policy first)
 for r in process-image presign-upload get-images; do
   aws iam delete-role-policy --role-name imageguard-$r-role --policy-name imageguard-$r-policy
   aws iam delete-role --role-name imageguard-$r-role

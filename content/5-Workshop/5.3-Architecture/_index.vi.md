@@ -1,51 +1,58 @@
 ---
-title: "Kiến trúc hệ thống"
-date: 2024-01-01
+title: "Kiến trúc"
+date: 2026-11-20
 weight: 3
 chapter: false
 pre: " <b> 5.3. </b> "
 ---
 
-# Kiến trúc hệ thống
+![Sơ đồ kiến trúc ImageGuard](../../../images/2-proposal/imageguard-architecture.drawio.png)
 
-![ImageGuard architecture diagram](/images/fig.jpg)
-*Figure 1: ImageGuard architecture diagram, drawn with AWS Architecture Icons.*
+## Luồng xử lý
 
-## Request flow
-| # | Step |
-| --- | --- |
-| 1 | The user opens the site through **CloudFront**; CloudFront reads the private web bucket via **OAC** |
-| 2 | Sign-in with **Cognito Managed Login** (Authorization Code + PKCE) → JWT |
-| 3 | `POST /upload-url` via **API Gateway** (JWT Authorizer) → the `presign-upload` Lambda creates a `PENDING` item in DynamoDB and returns a presigned URL (5 minutes) |
-| 4 | The browser `PUT`s the image directly to S3: `uploads/{sub}/{uuid}.jpg` |
-| 5 | **S3 Event** `ObjectCreated:Put` (prefix `uploads/`, suffix `.jpg`) invokes `process-image` asynchronously |
-| 6 | `DetectModerationLabels` (60% threshold). If no blocked category → `DetectLabels` (10 labels, ≥ 80%) |
-| 7 | Conditional `UpdateItem` on `status = PENDING` → `APPROVED` / `REJECTED` |
-| 8 | If `REJECTED` and the DB update succeeded → **SNS** emails the administrator |
-| 9 | Failures after 2 retries → **SQS DLQ** (14-day retention) |
-| 10 | `GET /images` → the `get-images` Lambda runs `Query` on `userId = sub`; only `APPROVED` images get a presigned GET URL |
-| 11–12 | Logs + EMF metrics → **CloudWatch**; Alarms → SNS |
-## Moderation policy
-- Blocked top-level categories: **Explicit, Violence, Visually Disturbing, Drugs & Tobacco, Hate Symbols** (environment variable `BLOCKED_CATEGORIES`, changeable without code changes).
-- **Alcohol** is allowed but its labels are still stored for administrators.
-- Moderate first, label second: violating images do not cost an extra `DetectLabels` call.
-## Security design
-| Principle | Implementation |
-| --- | --- |
-| Least privilege | One IAM role per Lambda, no `AWSLambdaBasicExecutionRole` |
-| Private data | Both buckets use **Block all public access**, ACLs disabled, SSE-S3, a bucket policy enforcing HTTPS |
-| Authentication | The JWT Authorizer validates the issuer (User Pool) and audience (App client); `userId` always comes from the `sub` claim, never from the body |
-| Safe upload | The server signs the presigned URL; it can PUT only one server-chosen key, expires after 5 minutes and requires `image/jpeg` |
-| Confused deputy | The Lambda resource-based policy uses `aws:SourceArn` + `aws:SourceAccount` |
-| Recursive trigger | The trigger only covers prefix `uploads/`, and `process-image` cannot write to S3 |
-| Idempotency | `UpdateItem` conditioned on `status = PENDING`: duplicate events or overwrites cannot change a result |
-| Web | CloudFront OAC, HTTPS, SecurityHeadersPolicy (HSTS, X-Frame-Options…), the frontend only uses `textContent` to avoid XSS |
-### Permissions per Lambda
-| Lambda | Allowed | Not allowed |
-| --- | --- | --- |
-| `process-image` | `s3:GetObject` (`uploads/*`), 2 Rekognition actions, `dynamodb:UpdateItem`, `sns:Publish`, `sqs:SendMessage`, its own logs | PutObject, Query, PutItem |
-| `presign-upload` | `s3:PutObject` (`uploads/*`), `dynamodb:PutItem`, logs | GetObject, Query, UpdateItem |
-| `get-images` | `dynamodb:Query`, `s3:GetObject` (`uploads/*`), logs | PutObject, PutItem |
-Rekognition uses `Resource: "*"` because `DetectModerationLabels` / `DetectLabels` do not support resource-level permissions; only those 2 actions are granted.
-## Why no VPC?
-There is no database or server that needs a private network. Lambda calls AWS services over HTTPS, authenticated by IAM. Putting Lambda in a VPC would add a NAT Gateway or VPC endpoints (tens of USD per month) without a meaningful security gain.
+| # | Bước |
+|---|---|
+| 1 | Người dùng mở web qua **CloudFront**; CloudFront đọc bucket web private bằng **OAC** |
+| 2 | Đăng nhập **Cognito Managed Login** (Authorization Code + PKCE) → nhận JWT |
+| 3 | `POST /upload-url` qua **API Gateway** (JWT Authorizer) → Lambda `presign-upload` tạo item `PENDING` trong DynamoDB và trả presigned URL (5 phút) |
+| 4 | Trình duyệt `PUT` ảnh thẳng lên S3: `uploads/{sub}/{uuid}.jpg` |
+| 5 | **S3 Event** `ObjectCreated:Put` (prefix `uploads/`, suffix `.jpg`) gọi Lambda `process-image` bất đồng bộ |
+| 6 | `DetectModerationLabels` (ngưỡng 60%). Nếu không thuộc danh mục bị chặn → `DetectLabels` (10 nhãn, ≥ 80%) |
+| 7 | `UpdateItem` có điều kiện `status = PENDING` → `APPROVED` / `REJECTED` |
+| 8 | Nếu `REJECTED` và DB đã cập nhật → **SNS** gửi email quản trị viên |
+| 9 | Lỗi sau 2 lần retry → **SQS DLQ** (giữ 14 ngày) |
+| 10 | `GET /images` → Lambda `get-images` `Query` theo `userId = sub`; chỉ ảnh `APPROVED` có presigned GET URL |
+| 11–12 | Log + metric EMF → **CloudWatch**; Alarm → SNS |
+
+## Chính sách kiểm duyệt
+
+- Chặn danh mục cấp 1: **Explicit, Violence, Visually Disturbing, Drugs & Tobacco, Hate Symbols** (biến môi trường `BLOCKED_CATEGORIES`, đổi không cần sửa code).
+- Cho qua **Alcohol** nhưng vẫn lưu nhãn để quản trị viên tra cứu.
+- Kiểm duyệt trước, gắn nhãn sau: ảnh vi phạm không tốn thêm lượt `DetectLabels`.
+
+## Thiết kế bảo mật
+
+| Nguyên tắc | Cách làm |
+|---|---|
+| Least privilege | Mỗi Lambda 1 IAM role riêng, không dùng `AWSLambdaBasicExecutionRole` |
+| Dữ liệu riêng tư | 2 bucket đều **Block all public access**, ACL disabled, SSE-S3, bucket policy bắt HTTPS |
+| Xác thực | JWT Authorizer kiểm tra issuer (User Pool) và audience (App client); `userId` luôn lấy từ claim `sub`, không nhận từ body |
+| Upload an toàn | Presigned URL do server ký, chỉ PUT được 1 key do server đặt, hết hạn 5 phút, bắt buộc `image/jpeg` |
+| Chống confused deputy | Resource-based policy của Lambda có `aws:SourceArn` + `aws:SourceAccount` |
+| Chống recursive trigger | Trigger chỉ prefix `uploads/`, `process-image` không có quyền ghi S3 |
+| Idempotent | `UpdateItem` điều kiện `status = PENDING`: sự kiện trùng hoặc upload đè không đổi được kết quả |
+| Web | CloudFront OAC, HTTPS, SecurityHeadersPolicy (HSTS, X-Frame-Options…), frontend chỉ dùng `textContent` để tránh XSS |
+
+### Quyền của từng Lambda
+
+| Lambda | Được phép | Không có |
+|---|---|---|
+| `process-image` | `s3:GetObject` (uploads/*), 2 action Rekognition, `dynamodb:UpdateItem`, `sns:Publish`, `sqs:SendMessage`, log của chính nó | PutObject, Query, PutItem |
+| `presign-upload` | `s3:PutObject` (uploads/*), `dynamodb:PutItem`, log | GetObject, Query, UpdateItem |
+| `get-images` | `dynamodb:Query`, `s3:GetObject` (uploads/*), log | PutObject, PutItem |
+
+Rekognition dùng `Resource: "*"` vì `DetectModerationLabels` / `DetectLabels` không hỗ trợ resource-level permission; bù lại chỉ cấp đúng 2 action.
+
+## Vì sao không dùng VPC?
+
+Không có cơ sở dữ liệu hay máy chủ nào cần mạng riêng. Lambda gọi các dịch vụ AWS qua HTTPS và được xác thực bằng IAM. Đưa Lambda vào VPC sẽ tốn thêm NAT Gateway hoặc VPC Endpoint (vài chục USD/tháng) mà không tăng bảo mật đáng kể.
