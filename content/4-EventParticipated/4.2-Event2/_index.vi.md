@@ -1,71 +1,73 @@
 ---
 title: "Event 2"
-date: 2026-11-14
+date: 2026-09-29
 weight: 2
 chapter: false
 pre: " <b> 4.2. </b> "
 ---
 
-# Bài thu hoạch: "FCAJ x FPTU: Cloud Mastery 1"
+# Bài thu hoạch: “AWS Cloud and AI Day Hanoi 2026” (HCMC Watch Party)
 
 ### Thông tin sự kiện
 
-- **Tên sự kiện:** FCAJ x FPTU: Cloud Mastery 1
-- **Thời gian:** Thứ Bảy, 14/11/2026 (09:00 – 12:00)
-- **Địa điểm:** Tầng 26, Tòa nhà Bitexco Financial Tower, Số 2 Hải Triều, Bến Nghé, Quận 1, TP. Hồ Chí Minh (Văn phòng AWS Việt Nam)
-- **Đơn vị tổ chức:** Sự kiện kết hợp giữa First Cloud AI Journey (FCAJ) và Trường Đại học FPT (FPTU)
-- **Hình thức đăng ký:** Đăng ký trực tiếp qua cổng thông tin sinh viên FPTU Portal
-- **Vai trò:** Người tham dự (Attendee) / Sinh viên & Thực tập sinh FPTU
+| Mục | Chi tiết |
+| --- | --- |
+| **Tên sự kiện** | AWS Cloud and AI Day Hanoi 2026 |
+| **Thời gian** | Thứ Ba ngày 29/09/2026, 07:30 – 17:00 (UTC+7) |
+| **Hình thức tổ chức** | Sự kiện trực tiếp tại Hà Nội, đồng thời tiếp sóng phiên Keynote và các phiên kỹ thuật chọn lọc đến Watch Party tại TP. Hồ Chí Minh |
+| **Hình thức tham dự** | Tham dự trực tiếp tại **HCMC Watch Party** tại văn phòng AWS Việt Nam, theo dõi phiên Keynote và các chủ đề chuyên sâu |
+| **Vai trò** | Người tham dự (Attendee) |
+| **Trang thông tin sự kiện** | https://aws.amazon.com/vi/events/cloud-day-hanoi/ |
 
-### Mục đích của sự kiện
+### Mục tiêu của sự kiện
 
-- Tạo không gian kết nối, giao lưu và chia sẻ kiến thức điện toán đám mây (Cloud Computing) dành riêng cho các bạn sinh viên FPT.
-- Cập nhật các kiến thức thực tế về kiến trúc Cloud và ứng dụng Enterprise AI trong môi trường doanh nghiệp.
-- Định hướng nghề nghiệp, giải đáp các thắc mắc về lộ trình phát triển và các kỹ năng chuyên môn cần thiết khi làm việc trong ngành Cloud/AI.
-- Tạo sân chơi giao lưu gắn kết thông qua minigame Quiz kiến thức công nghệ và giới thiệu các sự kiện cộng đồng tiếp theo (AWS Student Community Day Vietnam 2026).
+- Trình diễn cách điện toán đám mây và Generative AI hỗ trợ các nhà phát triển biến ý tưởng thành sản phẩm thực tế.
+- Giới thiệu mô hình **Agentic AI** — trí tuệ nhân tạo có khả năng tự lập kế hoạch và thực thi nhiệm vụ trong quy trình phát triển phần mềm, hiện đại hóa hạ tầng và bảo mật đám mây.
+- Chia sẻ các câu chuyện thành công và kiến trúc thực tế từ các doanh nghiệp hàng đầu tại Việt Nam.
+- Kết nối cộng đồng lập trình viên, chuyên gia kiến trúc đám mây và các nhà lãnh đạo công nghệ.
 
-### Nội dung và diễn biến sự kiện
+### Các diễn giả chính (Keynote Speakers)
 
-#### 1. Thông báo và công tác tổ chức
-Sự kiện là hoạt động chính thức dành cho sinh viên trường Đại học FPT tại văn phòng AWS Việt Nam (Tầng 26 Bitexco). Số lượng chỗ ưu tiên tại văn phòng có hạn và cổng đăng ký trên portal tự động đóng ngay khi nhận đủ lượt tham dự, thu hút sự hưởng ứng nhanh chóng từ các bạn sinh viên.
+- **Bà Jennifer Wicks** – Đại sứ Hợp chúng quốc Hoa Kỳ tại Việt Nam
+- **TS. Werner Vogels** – Phó Chủ tịch kiêm Giám đốc Công nghệ (CTO), Amazon.com
+- **Ông Eric Yeo** – Tổng Giám đốc Quốc gia, AWS Malaysia, Việt Nam và Đông Dương
+- **Bà Mai Lê** – Giám đốc Quản lý Sản phẩm, Katalon
+- **TS. Jens Lottner** – Tổng Giám đốc Điều hành, Ngân hàng Techcombank
 
-#### 2. Không khí buổi chia sẻ tại văn phòng AWS
-Sáng thứ Bảy (14/11/2026), sự kiện đã diễn ra thành công tốt đẹp với sự tham gia của rất nhiều các bạn sinh viên trẻ đam mê công nghệ đến từ khắp nơi tại Sài Gòn. Văn phòng AWS hiện đại tạo điều kiện lý tưởng cho các hoạt động thảo luận và giao lưu trực tiếp.
+### Các phiên chuyên đề đã theo dõi tại Watch Party
 
-#### 3. Phiên trao đổi hỏi đáp (Q&A) "Không có hồi kết"
-Đặc biệt trong buổi chia sẻ là phần trao đổi hỏi đáp mà theo em là *"Không có hồi kết"*, với những câu hỏi rất thực tế và hay của các bạn sinh viên:
-- Từ các thắc mắc về định hướng nghề nghiệp, kỹ năng thực tập cho đến các câu hỏi chuyên môn sâu về Cloud, Serverless và triển khai mô hình AI.
-- Các diễn giả và chuyên gia AWS đã giải đáp chi tiết, chia sẻ nhiều kinh nghiệm thực tiễn quý giá từ các dự án thực tế.
+| Thời gian | Phiên thảo luận |
+| --- | --- |
+| 09:00 | **Keynote:** “Sẽ ra sao nếu chúng ta tự hỏi: ‘Tại sao không biến mọi ý tưởng thành hiện thực?’” |
+| 11:00 | **Xây dựng phần mềm chưa từng có cùng Agentic AI** (HCMC Watch Party) |
+| 14:00 | **Xây dựng nền tảng dữ liệu sẵn sàng cho AI (Data Foundation)** & **Chuyển dịch quy mô lớn cùng AWS Transform** |
 
-#### 4. Minigame Quiz cuối buổi sôi nổi
-Bên cạnh phần chia sẻ lý thuyết và thảo luận, phần game Quiz trên nền tảng trực tuyến ở cuối buổi cũng được toàn thể hội trường hưởng ứng rất nồng nhiệt. Các câu hỏi tình huống thực tế (như đặc trưng phân biệt giữa Enterprise AI và Academic AI) giúp sinh viên củng cố kiến thức một cách hào hứng.
+### Nội dung và điểm nhấn kỹ thuật
 
-#### 5. Bật mí sự kiện sắp tới
-Ban tổ chức cũng hé lộ thông tin về sự kiện tiếp theo: cuối tuần này sẽ có một buổi Workshop chia sẻ về Cloud dành cho sinh viên với chủ đề **AWS Student Community Day Vietnam 2026**.
+1. **Keynote – Biến mọi ý tưởng thành hiện thực:** Các diễn giả nhấn mạnh AWS trao quyền cho các nhà kiến trúc vượt qua các giới hạn công nghệ thông thường, minh họa qua bài học chuyển đổi số thành công của Techcombank và Katalon. Trọng tâm xuyên suốt là Agentic AI giúp tăng tốc vòng đời phát triển và hiện đại hóa hệ thống.
+2. **Agentic AI trong phát triển phần mềm:** AI không chỉ dừng lại ở việc gợi ý từng dòng mã nguồn, mà chuyển sang tự nhận đề bài, phân tách các bước thực thi, sinh mã nguồn, sinh bộ kiểm thử tự động và lặp lại quá trình gỡ lỗi. Vai trò của lập trình viên chuyển dịch lên cấp độ kiến trúc sư và người kiểm duyệt giải pháp.
+3. **Nền tảng dữ liệu sẵn sàng cho AI (AI-ready Data Foundation):** Một mô hình AI chỉ mạnh khi dữ liệu nền tảng đạt chuẩn. Doanh nghiệp cần xây dựng quy trình thu thập, làm sạch, quản trị và phân loại dữ liệu trên các dịch vụ đám mây được quản lý (như S3, AWS Glue, OpenSearch) trước khi mở rộng quy mô ứng dụng AI.
+4. **Hiện đại hóa hệ thống với AWS Transform:** Dịch vụ ứng dụng Agentic AI để tự động hóa quá trình tái cấu trúc mã nguồn, chuyển đổi cơ sở dữ liệu và hiện đại hóa các hệ thống nguyên khối (monolith) cũ lên môi trường cloud-native.
 
 ### Bài học rút ra
 
-- **Thực tế doanh nghiệp so với học thuật:** Enterprise AI đòi hỏi giải quyết các bài toán kinh doanh cụ thể, xử lý dữ liệu biến đổi liên tục và đảm bảo tính sẵn sàng, bảo mật ở quy mô lớn thay vì chỉ đo độ chính xác trên tập benchmark cố định.
-- **Giá trị của việc giao lưu cộng đồng:** Tham gia các sự kiện trực tiếp tại văn phòng AWS giúp mở rộng tầm nhìn, kết nối với các bạn sinh viên cùng chí hướng và hiểu rõ hơn về kỳ vọng của doanh nghiệp công nghệ hàng đầu.
-- **Tinh thần chủ động học hỏi:** Việc tích cực đặt câu hỏi và tham gia thảo luận trong các buổi meetup giúp giải quyết các nút thắt kiến thức mà việc tự học đơn lẻ khó đạt được.
+- AI đã trở thành công cụ thực chiến trong doanh nghiệp Việt Nam, không còn là chủ đề nghiên cứu đơn thuần trên giảng đường.
+- Một giải pháp AI hiệu quả luôn bắt đầu từ một nền tảng dữ liệu sạch và hạ tầng cloud vững chắc (bảo mật, kiểm soát chi phí, giám sát).
+- Năng lực phát triển AI cần gắn liền với kiến trúc hệ thống điện toán đám mây để đảm bảo khả năng vận hành ổn định và bảo mật cao trong môi trường sản xuất.
 
 ### Ứng dụng vào công việc và dự án thực tập
 
-- Vận dụng các kiến thức về kiến trúc Enterprise AI và dịch vụ AWS vào việc hoàn thiện dự án **ImageGuard** của nhóm: kiểm soát luồng xử lý ảnh qua S3 Events, Lambda, Rekognition, tối ưu chi phí và bảo mật.
-- Chuẩn bị kế hoạch tham gia tích cực vào sự kiện **AWS Student Community Day Vietnam 2026** sắp tới.
+- **Dự án ImageGuard:** Áp dụng luồng xử lý chuẩn được giới thiệu trong sự kiện: **Tải lên → Bắt sự kiện (S3 Events) → Xử lý AI (Lambda & Rekognition) → Lưu trữ bảo mật (S3/DynamoDB)**, đảm bảo hệ thống tự động hóa hoàn toàn.
+- **Ưu tiên kiến trúc Serverless:** Sử dụng tối đa các dịch vụ serverless của AWS để giảm thiểu gánh nặng quản lý máy chủ, tập trung tài nguyên vào tính năng cốt lõi.
+- **Sử dụng AI có kiểm soát:** Xem AI như công cụ hỗ trợ đắc lực nhưng luôn đọc, hiểu và kiểm tra kỹ lưỡng kiến trúc cũng như chất lượng mã nguồn trước khi tích hợp vào dự án.
+
+### Trải nghiệm sự kiện
+
+Được tham dự sự kiện thông qua Watch Party tại văn phòng AWS Việt Nam cùng các bạn trong nhóm là một cơ hội học tập bổ ích. Việc lắng nghe trực tiếp các bài toán thực tế từ Techcombank, Katalon giúp em liên hệ sâu sắc với các bài lab thực hành hàng tuần về Lambda, S3, Bedrock và CloudWatch, tạo động lực lớn để trau dồi các chứng chỉ và kỹ năng Cloud trong kỳ thực tập.
 
 ---
 
-### Hình ảnh sự kiện
+### Ảnh check-in sự kiện
 
-#### 1. Ảnh check-in sự kiện
-![Ảnh check-in Cloud Mastery 1 tại Tầng 26 Bitexco](../../../images/4-Event/event2-checkin.jpg)
-*Hình 1: Nguyễn Ngọc Tân (người trong khung viền vàng bên phải) cùng các bạn sinh viên tham dự sự kiện Cloud Mastery 1 tại Tầng 26, Tòa nhà Bitexco (Văn phòng AWS Việt Nam).*
-
-#### 2. Minigame Quiz kiến thức Cloud & Enterprise AI
-![Minigame Quiz Enterprise AI](../../../images/4-Event/event2-quiz.jpg)
-*Hình 2: Câu hỏi minigame Quiz trong chương trình: Phân biệt đặc trưng Enterprise AI và Academic AI.*
-
-#### 3. Xác nhận đăng ký và phản hồi sự kiện
-![Xác nhận hoàn thành FCAJ x FPTU: Cloud Mastery 1](../../../images/4-Event/event2-feedback.jpg)
-*Hình 3: Ghi nhận phản hồi và đánh giá sau sự kiện qua biểu mẫu FCAJ x FPTU: Cloud Mastery 1.*
+![Ảnh check-in tại HCMC Watch Party](../../../images/4-Event/event2-watchparty.jpg)
+*Hình: Ảnh check-in tham dự sự kiện AWS Cloud and AI Day Hanoi 2026 – HCMC Watch Party tại Văn phòng AWS Việt Nam (Nguyễn Ngọc Tân).*

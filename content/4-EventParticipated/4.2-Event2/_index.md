@@ -1,71 +1,73 @@
 ---
 title: "Event 2"
-date: 2026-11-14
+date: 2026-09-29
 weight: 2
 chapter: false
 pre: " <b> 4.2. </b> "
 ---
 
-# Summary Report: "FCAJ x FPTU: Cloud Mastery 1"
+# Summary Report: “AWS Cloud and AI Day Hanoi 2026” (HCMC Watch Party)
 
 ### Event Information
 
-- **Event Name:** FCAJ x FPTU: Cloud Mastery 1
-- **Date & Time:** Saturday, 14/11/2026 (09:00 – 12:00)
-- **Location:** 26th Floor, Bitexco Financial Tower, 2 Hai Trieu Street, Ben Nghe Ward, District 1, Ho Chi Minh City (AWS Vietnam Office)
-- **Organizers:** Joint collaboration between First Cloud AI Journey (FCAJ) and FPT University (FPTU)
-- **Registration:** Directly via FPTU Student Portal
-- **Role:** Attendee / FPTU Student & Intern
+| Item | Details |
+| --- | --- |
+| **Event Name** | AWS Cloud and AI Day Hanoi 2026 |
+| **Date & Time** | Tuesday, 29/09/2026, 07:30 – 17:00 (UTC+7) |
+| **Format** | A free, one-day, in-person event in Hanoi, with keynote and selected sessions streamed to a watch party in Ho Chi Minh City |
+| **Participation** | Attended at the **HCMC Watch Party** in the AWS Vietnam office, following live streams of keynote and selected technical sessions |
+| **Role** | Attendee |
+| **Event URL** | https://aws.amazon.com/vi/events/cloud-day-hanoi/ |
 
 ### Event Objectives
 
-- Provide a dedicated technical exchange and knowledge-sharing environment for FPT University students.
-- Introduce modern cloud computing concepts and real-world enterprise AI adoption.
-- Provide career guidance, industry expectations, and technical roadmaps for students pursuing Cloud and AI engineering.
-- Foster community networking through interactive quizzes and introduce upcoming student initiatives (AWS Student Community Day Vietnam 2026).
+- Demonstrate how cloud and modern AI capabilities empower builders to transform ideas into viable production products.
+- Introduce **Agentic AI** paradigms — AI systems capable of autonomous reasoning, task planning, and execution across software development, legacy workload modernization, and cloud security.
+- Share practical success stories and deployment architectures from enterprise customers in Vietnam.
+- Foster community connections among developers, IT leaders, and the wider AWS Cloud ecosystem.
 
-### Event Highlights and Activities
+### Keynote Speakers
 
-#### 1. Organization and Student Engagement
-The event was an official university-industry initiative organized by FPT University in partnership with AWS Vietnam. Due to limited priority seating at the AWS Vietnam office (Floor 26, Bitexco), portal registrations reached maximum capacity rapidly.
+- **H.E. Jennifer Wicks** – U.S. Ambassador to Vietnam
+- **Dr. Werner Vogels** – CTO, Amazon.com
+- **Eric Yeo** – Country General Manager, Malaysia, Vietnam, Indochina, AWS
+- **Mai Le** – Director of Product Management, Katalon
+- **Dr. Jens Lottner** – Chief Executive Officer, Techcombank
 
-#### 2. Atmosphere at the AWS Vietnam Office
-On Saturday morning (14/11/2026), the session welcomed enthusiastic students from across Ho Chi Minh City. The modern and professional workspace at the AWS office offered great inspiration and networking opportunities.
+### Sessions Followed at HCMC Watch Party
 
-#### 3. In-depth Q&A Session
-The standout segment of the event was an open Q&A discussion described as *"never-ending"*, with practical and insightful questions from students:
-- Covering career orientation, internship skill requirements, cloud architecture best practices, and enterprise-grade AI versus academic projects.
-- AWS speakers provided detailed, experience-driven answers bridging university concepts with actual industry implementation.
+| Time | Session |
+| --- | --- |
+| 09:00 | **Keynote:** “What if we asked ourselves, ‘Why not make every idea possible?’” |
+| 11:00 | **Building Software Like Never Before with Agentic AI** (HCMC Watch Party) |
+| 14:00 | **Building an AI-Ready Data Foundation** & **Migration at Scale with AWS Transform** |
 
-#### 4. Interactive Knowledge Quiz
-Towards the end of the session, attendees participated in a lively online quiz addressing cloud and AI concepts (such as the distinguishing factors between Enterprise AI and Academic AI). The quiz witnessed great enthusiasm and high engagement across the hall.
+### Key Technical Highlights
 
-#### 5. Upcoming Community Event Teaser
-The organizers also announced the next major student event: **AWS Student Community Day Vietnam 2026**, scheduled for the following weekend.
+1. **Keynote – Empowering Builders:** The keynote highlighted how AWS provides comprehensive tooling to help builders surpass previous technical limits, citing enterprise transformations at Techcombank and Katalon. Agentic AI emerged as the central theme for accelerated development.
+2. **Agentic AI for Software Development:** AI is transitioning from passive code completion to autonomous agents capable of receiving high-level requirements, decomposing them into steps, writing code, generating unit tests, and iteratively debugging errors. Developers increasingly take on the role of system architects and reviewers.
+3. **AI-Ready Data Foundation:** AI models depend fundamentally on underlying data quality. Organizations must prioritize automated ingestion, cleaning, cataloging, and governance on managed cloud platforms (such as S3, Glue, and OpenSearch) before scaling AI initiatives.
+4. **Migration at Scale with AWS Transform:** AWS Transform leverages AI agents to automate code transformation, schema conversion, and modernization for legacy monolithic architectures at enterprise scale.
 
 ### Key Takeaways
 
-- **Enterprise AI vs Academic AI:** Enterprise AI focuses on delivering real business value on continuously evolving data, requiring robust governance, latency optimization, and cost-efficiency, rather than solely maximizing benchmark test metrics.
-- **Community Learning:** Attending industry events allows students to gain authentic perspectives, clarify technical doubts, and understand industry standards firsthand.
-- **Proactive Engagement:** Actively participating in discussions and asking critical questions accelerates learning beyond textbook theory.
+- AI is already a practical, production-ready driver across Vietnamese enterprises rather than a purely theoretical research field.
+- Sustainable AI implementations require a rock-solid cloud data foundation, robust identity/security boundaries, and continuous observability.
+- Cloud architecture skills and AI engineering skills must progress hand-in-hand to build end-to-end production systems.
 
-### Applying to My Work and Internship
+### Applying to My Work & Internship
 
-- Incorporate insights on Enterprise AI patterns into our team's **ImageGuard** project, specifically around presigned URL validation, cost control, and resilient data processing.
-- Maintain active participation in upcoming AWS student community workshops and apply cloud best practices systematically in future lab tasks.
+- **ImageGuard Project Alignment:** Our team project follows the cloud pipeline pattern: **Upload → Ingest/Event → Process (AI) → Secure Storage → Delivery**, integrating serverless AWS services with Amazon Rekognition.
+- **Serverless First:** Prioritize AWS managed and serverless offerings (AWS Lambda, S3, DynamoDB) so engineering focus remains on core application value rather than server maintenance.
+- **AI-Assisted Development:** Utilize AI assistants for boilerplate generation while verifying architecture correctness, security compliance, and performance manually.
+
+### Event Experience
+
+Participating in the HCMC Watch Party at the AWS Vietnam office alongside fellow interns was an invaluable experience. Seeing how leading domestic corporations leverage AWS cloud infrastructure and AI models reinforced our daily hands-on labs (Lambda, S3, Bedrock, CloudWatch). Learning about new concepts like Agentic AI, modern data foundations, and AWS Transform provided great motivation for the remainder of the internship.
 
 ---
 
-### Event Photos
+### Check-in Photo
 
-#### 1. Event Check-in
-![Check-in at Cloud Mastery 1, Floor 26 Bitexco](../../images/4-Event/event2-checkin.jpg)
-*Figure 1: Nguyễn Ngọc Tân (in the yellow box on the right) with fellow students at Cloud Mastery 1, Floor 26 Bitexco (AWS Vietnam Office).*
-
-#### 2. Interactive Enterprise AI Quiz
-![Enterprise AI Quiz Question](../../images/4-Event/event2-quiz.jpg)
-*Figure 2: Interactive quiz question on distinguishing Enterprise AI from academic projects.*
-
-#### 3. Event Survey Confirmation
-![Survey Confirmation for Cloud Mastery 1](../../images/4-Event/event2-feedback.jpg)
-*Figure 3: Submission confirmation for the FCAJ x FPTU: Cloud Mastery 1 feedback form.*
+![Check-in Photo at AWS Cloud and AI Day Watch Party](../../images/4-Event/event2-watchparty.jpg)
+*Figure: Check-in photo at the AWS Cloud and AI Day Hanoi 2026 – HCMC Watch Party (AWS Vietnam Office).*
