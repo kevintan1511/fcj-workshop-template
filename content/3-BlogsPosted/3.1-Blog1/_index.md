@@ -9,7 +9,7 @@ pre: " <b> 3.1. </b> "
 # Building a Collaborative Multi-Agent System with Amazon Bedrock and AWS Step Functions
 **Author:** Nguyễn Ngọc Tân – https://builder.aws.com/community/@kevintan1511
 **Posted on:** Facebook – 18/11/2026 – https://www.facebook.com/share/p/14vDq2GGn9q/?mibextid=wwXIfr
-![Architecture of the collaborative multi-agent system](/images/blog1.jpg)
+![Architecture of the collaborative multi-agent system](../../images/3-Blog/blog1.jpg)
 *Figure: Architecture of the collaborative multi-agent system, with an orchestrator coordinating specialized agents.*
 
 ### Introduction

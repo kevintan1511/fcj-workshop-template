@@ -51,6 +51,6 @@ The full event included more than 30 sessions, an expo with technical demos, a S
 ### Event Experience
 I followed the keynote and sessions at the HCMC Watch Party together with my teammates. Hearing how Vietnamese companies use cloud and AI made the services from our weekly labs, such as Lambda, S3, Bedrock and CloudWatch, feel much more concrete. Several terms were new to me, including agentic AI, data foundation and AWS Transform, so I wrote them down to study further during the internship.
 ### Check-in Photo
-![Check-in photo at the HCMC Watch Party](/images/event1.jpg)
+![Check-in photo at the HCMC Watch Party](../../../images/4-Event/event1.jpg)
 *Figure: AWS Cloud and AI Day Hanoi 2026 – HCMC Watch Party check-in (Nguyễn Ngọc Tân).*
 

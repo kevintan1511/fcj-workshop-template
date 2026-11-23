@@ -60,7 +60,7 @@ Outcomes are saved in **Amazon DynamoDB** and appear in the web interface within
 - The target is a small community, about 3,000 images per month, not internet scale.
 - Moderation uses a **60%** confidence threshold and labeling uses **80%**; both can be tuned.
 ## 4. Solution Architecture
-![ImageGuard architecture diagram](/images/fig.jpg)
+![ImageGuard architecture diagram](../../images/2-proposal/imageguard-architecture.drawio.png)
 *Figure 1: ImageGuard architecture diagram, drawn with AWS Architecture Icons.*
 
 ### 4.1. AWS Services and Rationale

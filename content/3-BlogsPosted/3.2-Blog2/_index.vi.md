@@ -9,7 +9,7 @@ pre: " <b> 3.2. </b> "
 # Building a Scalable RAG Pipeline with Amazon Bedrock and LangChain on AWS
 **Author:** Nguyễn Ngọc Tân – https://builder.aws.com/community/@kevintan1511
 **Posted on:** AWS Study Group VN (Facebook) – 21/11/2026 – https://www.facebook.com/share/p/19c9vku5gi/
-![RAG pipeline in five phases](/images/blog2.jpg)
+![RAG pipeline in five phases](../../../images/3-Blog/blog2.jpg)
 *Figure: The RAG pipeline in five phases: setup, ingestion, embedding and retrieval, orchestration and generation, and deployment and scaling.*
 
 ### Introduction
