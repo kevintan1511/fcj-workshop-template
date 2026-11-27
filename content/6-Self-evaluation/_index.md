@@ -18,18 +18,18 @@ Reflecting objectively and humbly on my entire internship, I assess myself again
 
 | No. | Criteria | Description | Good | Fair | Average |
 | --- | --- | --- | :---: | :---: | :---: |
-| 1 | **Professional knowledge & skills** | Understanding of the field, applying knowledge in practice, proficiency with tools, work quality | ☐ | ✅ | ☐ |
-| 2 | **Ability to learn** | Absorbing new knowledge and learning quickly | ☐ | ✅ | ☐ |
-| 3 | **Proactiveness** | Taking initiative, seeking tasks without waiting for instructions | ☐ | ✅ | ☐ |
-| 4 | **Sense of responsibility** | Completing tasks on time and ensuring quality | ✅ | ☐ | ☐ |
-| 5 | **Discipline** | Following schedules, rules and work processes | ✅ | ☐ | ☐ |
-| 6 | **Progressive mindset** | Willingness to receive feedback and improve | ✅ | ☐ | ☐ |
-| 7 | **Communication** | Presenting ideas and reporting work clearly | ☐ | ✅ | ☐ |
-| 8 | **Teamwork** | Working effectively with colleagues and in teams | ☐ | ✅ | ☐ |
-| 9 | **Professional conduct** | Respecting colleagues, partners and the work environment | ✅ | ☐ | ☐ |
-| 10 | **Problem-solving skills** | Identifying problems, proposing solutions, creativity | ☐ | ✅ | ☐ |
-| 11 | **Contribution to project/team** | Work effectiveness, improvement ideas, recognition from the team | ☐ | ✅ | ☐ |
-| 12 | **Overall** | General evaluation of the whole internship | ☐ | ✅ | ☐ |
+| 1 | **Professional knowledge & skills** | Understanding of the field, applying knowledge in practice, proficiency with tools, work quality | ☐ | ✓ | ☐ |
+| 2 | **Ability to learn** | Absorbing new knowledge and learning quickly | ☐ | ✓ | ☐ |
+| 3 | **Proactiveness** | Taking initiative, seeking tasks without waiting for instructions | ☐ | ✓ | ☐ |
+| 4 | **Sense of responsibility** | Completing tasks on time and ensuring quality | ✓ | ☐ | ☐ |
+| 5 | **Discipline** | Following schedules, rules and work processes | ✓ | ☐ | ☐ |
+| 6 | **Progressive mindset** | Willingness to receive feedback and improve | ✓ | ☐ | ☐ |
+| 7 | **Communication** | Presenting ideas and reporting work clearly | ☐ | ✓ | ☐ |
+| 8 | **Teamwork** | Working effectively with colleagues and in teams | ☐ | ✓ | ☐ |
+| 9 | **Professional conduct** | Respecting colleagues, partners and the work environment | ✓ | ☐ | ☐ |
+| 10 | **Problem-solving skills** | Identifying problems, proposing solutions, creativity | ☐ | ✓ | ☐ |
+| 11 | **Contribution to project/team** | Work effectiveness, improvement ideas, recognition from the team | ☐ | ✓ | ☐ |
+| 12 | **Overall** | General evaluation of the whole internship | ☐ | ✓ | ☐ |
 
 ### Areas for Improvement
 
