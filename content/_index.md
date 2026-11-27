@@ -18,7 +18,7 @@ chapter: false
 
 &emsp; **Major:** Artificial Intelligence
 
-&emsp; **Class:** AWS092026
+&emsp; **Class:** AITeamFPT
 
 &emsp; **Internship Company:** Amazon Web Services Viet Nam Company Limited
 

@@ -18,7 +18,7 @@ chapter: false
 
 &emsp; **Ngành:** Trí tuệ nhân tạo (AI)
 
-&emsp; **Lớp:** AWS092026
+&emsp; **Lớp:** AITeamFPT
 
 &emsp; **Công ty thực tập:** Công ty TNHH Amazon Web Services Viet Nam
 
