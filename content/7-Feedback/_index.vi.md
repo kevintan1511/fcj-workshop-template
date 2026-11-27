@@ -19,7 +19,7 @@ Trong suốt 3 tháng thực tập tại **Công ty TNHH Amazon Web Services Vi�
 * Việc được cấp tài khoản AWS thực tế cùng ngân sách thực hành (AWS Credits) giúp sinh viên xóa bỏ khoảng cách giữa lý thuyết giảng đường và triển khai thực chiến trên môi trường đám mây doanh nghiệp.
 
 **2. Sự hỗ trợ từ đội ngũ Mentor và Ban tổ chức**
-* Các anh mentor (anh Lữ Hoàn Thiện, anh Huỳnh Hoàng Long) luôn nhiệt tình, tâm huyết và có chiều sâu chuyên môn cao.
+* Các anh mentor (anh Lữ Hoàn Thiện, anh Nguyễn Gia Hưng) luôn nhiệt tình, tâm huyết và có chiều sâu chuyên môn cao.
 * Điều em tâm đắc nhất ở các mentor là phương pháp hướng dẫn mang tính định hướng: không đưa ra đáp án có sẵn ngay lập tức, mà đặt câu hỏi gợi mở để sinh viên tự đọc tài liệu kiến trúc (AWS Architecture Center), tra cứu mã lỗi và kiểm tra log trên CloudWatch để rèn luyện kỹ năng phân tích nguyên nhân gốc rễ (Root Cause Analysis).
 
 **3. Sự phù hợp giữa công việc thực tập và chuyên ngành**

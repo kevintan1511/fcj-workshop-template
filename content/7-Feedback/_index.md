@@ -19,7 +19,7 @@ Throughout my 3-month internship at **Amazon Web Services Vietnam Company Limite
 * Providing real AWS accounts alongside dedicated hands-on credits completely bridges the gap between academic theory and enterprise cloud implementations.
 
 **2. Support from Mentors and Program Organizers**
-* The mentors (Mr. Lu Hoan Thien, Mr. Huynh Hoang Long) are dedicated, enthusiastic, and possess deep technical expertise.
+* The mentors (Mr. Lu Hoan Thien, Mr. Nguyen Gia Hung) are dedicated, enthusiastic, and possess deep technical expertise.
 * What I appreciated most is their inquiry-based mentoring philosophy: rather than handing out quick solutions, mentors pose guiding questions that motivate students to consult official architecture documentation (AWS Architecture Center), inspect error codes, and examine CloudWatch logs to master Root Cause Analysis.
 
 **3. Relevance to Academic Major**
