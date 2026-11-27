@@ -19,10 +19,6 @@ pre: " <b> 5.2. </b> "
 
 ![Group IAM với các policy](../../../images/5-workshop/0-1-iam-group-policies.png)
 
-{{% notice warning %}}
-`IAMFullAccess` cho phép tự cấp thêm quyền (privilege escalation). Trong workshop chấp nhận được vì user phải tạo role cho Lambda; môi trường production nên giới hạn bằng **permission boundary**.
-{{% /notice %}}
-
 ## Region và công cụ
 
 - Region: **US East (N. Virginia) – us-east-1**. Kiểm tra góc phải Console trước mỗi bước.

@@ -6,7 +6,39 @@ chapter: false
 pre: " <b> 5.8. </b> "
 ---
 
-**Demo video:** `[paste the YouTube / Google Drive link after recording]`
+**Live Demonstration:** [https://imageguard-app.vercel.app/](https://imageguard-app.vercel.app/) | [https://d1726d6l9yiqcj.cloudfront.net/](https://d1726d6l9yiqcj.cloudfront.net/)
+
+**Demo Video:** `[Paste the YouTube / Google Drive link after recording]` *(Pre-rendered HD walkthrough available at `D:\ImageGuard_Review_VI.mp4` and English version at `D:\ImageGuard_Review_EN.mp4`)*
+
+---
+
+## Core Application Screens in ImageGuard
+
+### 1. Guest Landing Page
+Intuitive modern UI with rotating LED beam effects, explaining the 3-step automated workflow and previewing the public feed.
+
+![ImageGuard Landing Page](../../images/5-workshop/21-4-web-first-load-v2.jpg)
+*Figure: ImageGuard guest landing page served through CloudFront with Cognito sign-in*
+
+### 2. Moderation Overview Dashboard
+High-level KPIs showing total items, 50% approval pass rate, published count, Rekognition label frequency charts, and recent activity timeline.
+
+![ImageGuard Overview Dashboard](../../images/5-workshop/26-2-web-overview-v2.png)
+*Figure: ImageGuard Moderation Overview Dashboard*
+
+### 3. Personal Image Vault
+User image management console showing AI label tags, blocked moderation categories, and publish / unpublish controls.
+
+![ImageGuard Vault](../../images/5-workshop/26-3-web-gallery-v2.png)
+*Figure: Image Vault displaying APPROVED (beer bottle) and REJECTED (wooden toy gun) classifications*
+
+### 4. Moderated Public Feed
+Displays verified safe images that passed automated Amazon Rekognition moderation and were published by users to the community feed.
+
+![ImageGuard Public Feed](../../images/5-workshop/26-4-web-feed-v2.png)
+*Figure: ImageGuard Public Feed interface on desktop PC*
+
+---
 
 ## Video script (5–7 minutes)
 

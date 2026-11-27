@@ -17,7 +17,11 @@ pre: " <b> 5.5. </b> "
 | Key lạ | Upload file không có item PENDING | Không tạo item mới, không gửi email |
 | DLQ | Đổi `TABLE_NAME` sai rồi gọi Lambda bất đồng bộ | Sau 2 lần retry, DLQ có message `RetriesExhausted`, `approximateInvokeCount: 3` |
 
-![Gallery: ảnh APPROVED và REJECTED](../../../images/5-workshop/26-3-web-gallery.png)
+![Gallery: ảnh APPROVED và REJECTED](../../../images/5-workshop/26-3-web-gallery-v2.png)
+*Hình: Kho ảnh của tôi (Vault) — kiểm duyệt tự động hiển thị nhãn AI và phân loại APPROVED / REJECTED*
+
+![Tổng quan kiểm duyệt](../../../images/5-workshop/26-2-web-overview-v2.png)
+*Hình: Màn hình Tổng quan kiểm duyệt — thống kê tỷ lệ duyệt đạt chuẩn 50%, biểu đồ tần suất nhãn Rekognition và lịch sử hoạt động gần đây*
 
 {{% notice note %}}
 **False positive:** súng đồ chơi bằng gỗ bị nhận là *Violence/Weapons* với độ tin cậy ~97%. Hướng cải thiện: tăng `MIN_MODERATION_CONFIDENCE` cho danh mục cụ thể, hoặc thêm bước quản trị viên duyệt lại ảnh `REJECTED`.
@@ -27,21 +31,40 @@ Bài test DLQ còn cho thấy **least privilege** hoạt động: lỗi trong DL
 
 ![Message trong DLQ: RetriesExhausted](../../../images/5-workshop/15-2b-dlq-message-body.jpg)
 
+## Đối chiếu tiêu chí hoàn thành (Proposal mục 3.2)
+
+| Tiêu chí | Mục tiêu | Kết quả đo |
+|---|---|---|
+| Thời gian xử lý 1 ảnh | ≤ 10 giây | Khoảng 0,5–1 giây (metric `ProcessingLatency` trên dashboard) |
+| Ảnh vi phạm bị chặn đúng | ≥ 90% | Chưa đủ mẫu để kết luận: bộ ảnh thử nghiệm hiện chỉ có 2 ảnh |
+| Ảnh hợp lệ bị chặn nhầm | ≤ 10% | 1/2 ảnh bị chặn nhầm (súng gỗ đồ chơi → Violence/Weapons 98%); mẫu quá nhỏ, cần bộ thử lớn hơn |
+| Chưa đăng nhập gọi API | Bị từ chối (401) | `{"message":"Unauthorized"}` |
+| Người dùng A xem ảnh của B | Không thể | Gallery của người dùng thật chỉ hiện ảnh của chính họ, dù bảng có cả item của `test-user-001` (`Query` theo `sub`) |
+| Phát hiện ảnh vi phạm | Gửi email quản trị viên | Đạt |
+| Truy cập trực tiếp bucket S3 | Bị chặn | 403 AccessDenied |
+| Trực quan hóa giao diện PC | Bảng điều khiển Console hiện đại, đầy đủ KPI và bảng tin | Trực quan hóa toàn diện trên màn hình máy tính, thao tác nhanh và trực quan |
+
+**Hạn chế:** tỉ lệ chặn đúng và chặn nhầm cần một bộ ảnh thử nghiệm lớn hơn (ví dụ 20–50 ảnh có gán nhãn đúng/sai) để đo chính xác. Ví dụ súng gỗ đồ chơi cho thấy cần thêm ngưỡng riêng cho từng danh mục hoặc bước quản trị viên duyệt lại ảnh `REJECTED`.
+
 ## Kiểm thử bảo mật
 
 | Test | Kết quả mong đợi | Thực tế |
 |---|---|---|
-| Gọi `GET /images` không có token | 401 Unauthorized | ✅ `{"message":"Unauthorized"}` |
-| Mở thẳng file trên bucket web | 403 AccessDenied | ✅ chỉ CloudFront đọc được (OAC) |
-| Mở thẳng Object URL của ảnh | 403 AccessDenied | ✅ |
-| Mở presigned URL sau 6 phút | Request has expired | ✅ |
-| `http://` | Tự chuyển `https://` | ✅ |
-| Response header | Có HSTS, X-Frame-Options, X-Content-Type-Options, Referrer-Policy | ✅ |
-| Đăng nhập | URL có `code_challenge_method=S256` (PKCE) | ✅ |
+| Gọi `GET /images` không có token | 401 Unauthorized | `{"message":"Unauthorized"}` |
+| Mở thẳng file trên bucket web | 403 AccessDenied | Chỉ CloudFront đọc được (OAC) |
+| Mở thẳng Object URL của ảnh | 403 AccessDenied | Đạt |
+| Mở presigned URL sau 6 phút | Request has expired | 200 khi còn hạn, 403 sau khi hết hạn |
+| `http://` | Tự chuyển `https://` | `301 Moved Permanently` |
+| Response header | Có HSTS, X-Frame-Options, X-Content-Type-Options, Referrer-Policy | Đạt |
+| Đăng nhập | URL có `code_challenge_method=S256` (PKCE) | Đạt |
 
 ![API không có token trả 401](../../../images/5-workshop/27-1-api-no-token.jpg)
 
 ![Truy cập thẳng S3 bị từ chối](../../../images/5-workshop/27-2-s3-web-direct-denied.jpg)
+
+![Mở thẳng Object URL ảnh bị từ chối](../../../images/5-workshop/27-3-s3-image-direct-denied.jpg)
+
+![HTTP chuyển HTTPS và presigned URL hết hạn](../../../images/5-workshop/27-4-https-redirect-presigned-expired.jpg)
 
 Web được phục vụ từ edge **SGN (TP.HCM)** của CloudFront, nên người dùng Việt Nam vẫn tải nhanh dù backend ở us-east-1.
 
@@ -55,7 +78,12 @@ Web được phục vụ từ edge **SGN (TP.HCM)** của CloudFront, nên ngư�
 **Nguyên nhân:** lúc upload, item `img-002` chưa khớp nên `UpdateItem` có điều kiện bị từ chối; bản code đầu **gửi SNS trước** khi ghi DB nên email vẫn đi.
 **Bài học:** thiết kế cũ cho phép ảnh "lạ" spam email quản trị viên. **Đã sửa:** chỉ gửi SNS khi DB đã ghi `REJECTED`; nếu SNS lỗi thì ghi log ERROR + metric `AlertPublishFailed` để alarm bắt.
 
-![Email đến dù item vẫn PENDING](../../../images/5-workshop/t-1-bug-email-before-update.png)
+![Email cảnh báo vẫn được gửi…](../../../images/5-workshop/t-1-bug-email-before-update.png)
+*Email cảnh báo vẫn được gửi…*
+
+![…trong khi item vẫn ở trạng thái PENDING](../../../images/5-workshop/t-2-bug-item-still-pending.png)
+*…trong khi item vẫn ở trạng thái PENDING*
+
 
 ### 3. Alarm không gửi email
 **Hiện tượng:** alarm chuyển ALARM nhưng không có email; lịch sử alarm ghi *"Failed to execute action"*.

@@ -6,7 +6,7 @@ chapter: false
 pre: " <b> 5.3. </b> "
 ---
 
-![Sơ đồ kiến trúc ImageGuard](../../../images/2-proposal/imageguard-architecture.drawio.png)
+![Sơ đồ kiến trúc ImageGuard](../../../images/5-workshop/imageguard-architecture.drawio.png)
 
 ## Luồng xử lý
 

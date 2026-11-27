@@ -6,7 +6,7 @@ chapter: false
 pre: " <b> 5.3. </b> "
 ---
 
-![ImageGuard architecture diagram](../../images/2-proposal/imageguard-architecture.drawio.png)
+![ImageGuard architecture diagram](../../images/5-workshop/imageguard-architecture.drawio.png)
 
 ## Request flow
 

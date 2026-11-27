@@ -17,6 +17,6 @@ The whole system is **serverless**, runs in **us-east-1**, and costs about **USD
 | **Duration** | 3–4 hours |
 | **Level** | 200 – Intermediate |
 | **Main services** | Amazon S3, AWS Lambda, Amazon Rekognition, Amazon DynamoDB, Amazon API Gateway, Amazon Cognito, Amazon CloudFront, Amazon SNS, Amazon SQS, Amazon CloudWatch, AWS IAM |
-| **Source code** | [static/code/imageguard](https://github.com/Pham-Nhut-An/fcj-workshop/tree/main/static/code/imageguard) |
+| **Source code** | [static/code/imageguard](https://github.com/kevintan1511/fcj-workshop-template/tree/main/static/code/imageguard) |
 
 {{% children  /%}}

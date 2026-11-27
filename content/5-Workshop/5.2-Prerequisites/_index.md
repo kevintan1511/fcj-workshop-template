@@ -19,10 +19,6 @@ pre: " <b> 5.2. </b> "
 
 ![IAM group with its policies](../../images/5-workshop/0-1-iam-group-policies.png)
 
-{{% notice warning %}}
-`IAMFullAccess` allows privilege escalation. It is acceptable in this workshop because the user must create Lambda roles; in production, restrict it with a **permission boundary**.
-{{% /notice %}}
-
 ## Region and tools
 
 - Region: **US East (N. Virginia) – us-east-1**. Check the top-right corner of the Console before every step.
