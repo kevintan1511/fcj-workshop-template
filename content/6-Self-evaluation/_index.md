@@ -1,6 +1,6 @@
 ---
 title: "Self-Assessment"
-date: 2024-01-01
+date: 2026-09-14
 weight: 6
 chapter: false
 pre: " <b> 6. </b> "
@@ -8,17 +8,31 @@ pre: " <b> 6. </b> "
 
 # Self-Assessment
 
-{{% notice info %}}
-**Ongoing** — this section will be updated soon.
-{{% /notice %}}
+During my internship at **Amazon Web Services Vietnam Company Limited** (under the First Cloud AI Journey program) from **14/09/2026** to **14/12/2026**, I had a valuable opportunity to apply my academic foundation in Artificial Intelligence from FPT University into enterprise-grade cloud computing environments on AWS.
 
-| No. | Criteria | Good | Fair | Average | Comment |
+As a core member responsible for AI integration and technical workflows within **AITeamFPT**, I collaborated with my teammates to build and deploy the **ImageGuard** workshop – an automated image moderation and labeling system powered by Amazon Rekognition on a serverless architecture. This hands-on journey enabled me to advance significantly in designing event-driven pipelines, enforcing least-privilege IAM policies, implementing image processing Lambda functions, conducting end-to-end testing, and authoring bilingual technical documentation.
+
+Beyond technical competencies, I consistently maintained a professional work ethic, complied with office regulations, actively participated in AWS technology meetups at Bitexco, and kept an honest, comprehensive worklog reflecting real progress.
+
+Reflecting objectively on my entire internship, I assess myself against the 12 standard criteria below:
+
+| No. | Criteria | Description | Good | Fair | Average |
 | --- | --- | --- | --- | --- | --- |
-| 1 | Professional knowledge | | | | |
-| 2 | Self-learning & research | | | | |
-| 3 | Proactiveness | | | | |
-| 4 | Discipline & compliance | | | | |
-| 5 | Communication | | | | |
-| 6 | Teamwork | | | | |
-| 7 | Problem solving | | | | |
-| 8 | Contribution to the workshop | | | | |
+| 1 | **Professional knowledge & skills** | Understanding of the field, applying knowledge in practice, proficiency with tools, work quality | ✅ | ☐ | ☐ |
+| 2 | **Ability to learn** | Absorbing new knowledge and learning quickly | ✅ | ☐ | ☐ |
+| 3 | **Proactiveness** | Taking initiative, seeking tasks without waiting for instructions | ✅ | ☐ | ☐ |
+| 4 | **Sense of responsibility** | Completing tasks on time and ensuring quality | ✅ | ☐ | ☐ |
+| 5 | **Discipline** | Following schedules, rules and work processes | ✅ | ☐ | ☐ |
+| 6 | **Progressive mindset** | Willingness to receive feedback and improve | ✅ | ☐ | ☐ |
+| 7 | **Communication** | Presenting ideas and reporting work clearly | ☐ | ✅ | ☐ |
+| 8 | **Teamwork** | Working effectively with colleagues and in teams | ✅ | ☐ | ☐ |
+| 9 | **Professional conduct** | Respecting colleagues, partners and the work environment | ✅ | ☐ | ☐ |
+| 10 | **Problem-solving skills** | Identifying problems, proposing solutions, creativity | ✅ | ☐ | ☐ |
+| 11 | **Contribution to project/team** | Work effectiveness, improvement ideas, recognition from the team | ✅ | ☐ | ☐ |
+| 12 | **Overall** | General evaluation of the whole internship | ✅ | ☐ | ☐ |
+
+### Areas for Improvement
+
+* **Technical Presentation Skills:** Need further practice in articulating complex architectural flows and answering deep technical queries concisely and confidently in front of larger audiences.
+* **Early Cost-Optimization Mindset:** Proactively plan cost estimation models and data lifecycle policies (S3 Lifecycle, tiering) during the initial design phase rather than addressing them toward the end.
+* **Proactive Mentor Consultations:** When facing complex blockers (such as AI service quota constraints or advanced IAM permission boundaries), summarize findings and seek mentor guidance earlier to expedite resolution.
