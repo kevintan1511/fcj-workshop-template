@@ -17,6 +17,6 @@ Toàn bộ hệ thống là **serverless** (không máy chủ), chạy ở Regio
 | **Thời gian thực hành** | 3–4 giờ |
 | **Mức độ** | 200 – Intermediate |
 | **Dịch vụ chính** | Amazon S3, AWS Lambda, Amazon Rekognition, Amazon DynamoDB, Amazon API Gateway, Amazon Cognito, Amazon CloudFront, Amazon SNS, Amazon SQS, Amazon CloudWatch, AWS IAM |
-| **Mã nguồn** | [static/code/imageguard](https://github.com/kevintan1511/fcj-workshop-template/tree/main/static/code/imageguard) |
+| **Mã nguồn** | [static/code/imageguard](https://github.com/Pham-Nhut-An/fcj-workshop/tree/main/static/code/imageguard) |
 
 {{% children  /%}}
