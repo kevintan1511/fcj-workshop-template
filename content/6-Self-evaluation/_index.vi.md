@@ -14,22 +14,22 @@ Là thành viên phụ trách kỹ thuật AI và luồng tích hợp trong nhó
 
 Bên cạnh mặt chuyên môn, em luôn nỗ lực duy trì thái độ làm việc nghiêm túc, tuân thủ kỷ luật văn phòng, tích cực tham gia các buổi meetup và sự kiện công nghệ của AWS tại Bitexco, cũng như duy trì việc ghi chép nhật ký công việc (worklog) trung thực, sát với tiến độ thực tế.
 
-Với tinh thần cầu thị và nhìn nhận khách quan, em tự đánh giá bản thân theo các tiêu chí dưới đây:
+Với tinh thần cầu thị và nhìn nhận khách quan, em tự đánh giá bản thân theo 12 tiêu chí chuẩn như sau:
 
-| STT | Tiêu chí | Mô tả | Tốt | Khá | Trung bình | Nhận xét |
-| :---: | :--- | :--- | :---: | :---: | :---: | :--- |
-| 1 | **Kiến thức và kỹ năng chuyên môn** | Hiểu biết về ngành, áp dụng kiến thức vào thực tế, chất lượng công việc | ☐ | ☑ | ☐ | Nắm và áp dụng được các dịch vụ cốt lõi (S3, Lambda, DynamoDB, API Gateway, Rekognition); kinh nghiệm vận hành ở quy mô production còn hạn chế. |
-| 2 | **Khả năng tự học & nghiên cứu** | Tiếp thu kiến thức mới, tự tìm tòi tài liệu | ☑ | ☐ | ☐ | Chủ động đọc tài liệu AWS và cloudjourney; tự thử nghiệm trên Console trước khi viết tài liệu. |
-| 3 | **Tính chủ động** | Tự tìm hiểu, nhận nhiệm vụ mà không chờ chỉ dẫn | ☑ | ☐ | ☐ | Tự lên kế hoạch tuần, nhận phần việc trong nhóm và đề xuất phương án khi gặp lỗi. |
-| 4 | **Kỷ luật & tuân thủ quy định** | Tuân thủ giờ giấc, nội quy, quy trình | ☑ | ☐ | ☐ | Điểm danh đúng giờ, tuân thủ nội quy văn phòng và quy trình nộp bài. |
-| 5 | **Kỹ năng giao tiếp** | Trình bày ý tưởng, báo cáo công việc rõ ràng | ☐ | ☑ | ☐ | Trao đổi công việc rõ ràng; cần tự tin hơn khi trình bày trước nhóm và mentor. |
-| 6 | **Làm việc nhóm** | Phối hợp hiệu quả với đồng nghiệp | ☑ | ☐ | ☐ | Phối hợp triển khai workshop, chia sẻ tài liệu và review chéo với các thành viên. |
-| 7 | **Năng lực giải quyết vấn đề** | Nhận diện vấn đề, đề xuất giải pháp | ☐ | ☑ | ☐ | Biết đọc log CloudWatch và khoanh vùng lỗi; cần hệ thống hóa quy trình xử lý sự cố hơn. |
-| 8 | **Tính cầu tiến** | Sẵn sàng nhận góp ý và cải thiện bản thân | ☑ | ☐ | ☐ | Luôn cởi mở lắng nghe các ý kiến phản hồi từ mentor và đồng đội để hoàn thiện chất lượng code và tài liệu hướng dẫn. |
-| 9 | **Ứng xử chuyên nghiệp** | Tôn trọng đồng nghiệp, đối tác, môi trường làm việc | ☑ | ☐ | ☐ | Tôn trọng mentor, đồng nghiệp và giữ gìn tác phong chuẩn mực, lịch sự trong môi trường làm việc chuyên nghiệp của AWS. |
-| 10 | **Đóng góp vào dự án/tổ chức** | Hiệu quả công việc, ý tưởng cải tiến, được nhóm ghi nhận | ☐ | ☑ | ☐ | Đóng góp tích cực vào module nhận diện ảnh ImageGuard, xây dựng kịch bản kiểm thử tự động và biên soạn lab guide chi tiết. |
-| 11 | **Tư duy tối ưu & hệ thống** | Nhìn nhận kiến trúc toàn diện, tối ưu tài nguyên | ☐ | ☑ | ☐ | Bám sát các trụ cột AWS Well-Architected; cần rèn luyện thêm tư duy tính toán chi phí và vòng đời dữ liệu ngay từ giai đoạn thiết kế đầu vào. |
-| 12 | **Tổng thể** | Đánh giá chung về toàn bộ quá trình thực tập | ☐ | ☑ | ☐ | Kỳ thực tập đạt kết quả Khá, tích lũy được nền tảng Cloud/AI thực chiến vững chắc và định hình rõ nét lộ trình phát triển nghề nghiệp tương lai. |
+| STT | Tiêu chí | Mô tả | Tốt | Khá | Trung bình |
+| :---: | :--- | :--- | :---: | :---: | :---: |
+| 1 | **Kiến thức và kỹ năng chuyên môn** | Hiểu lĩnh vực, áp dụng kiến thức vào thực tế, sử dụng công cụ, chất lượng công việc | ☐ | ☑ | ☐ |
+| 2 | **Khả năng học hỏi** | Tiếp thu kiến thức mới, học nhanh | ☐ | ☑ | ☐ |
+| 3 | **Chủ động** | Tự tìm hiểu, nhận nhiệm vụ mà không chờ chỉ dẫn | ☐ | ☑ | ☐ |
+| 4 | **Tinh thần trách nhiệm** | Hoàn thành công việc đúng hạn, đảm bảo chất lượng | ☑ | ☐ | ☐ |
+| 5 | **Kỷ luật** | Tuân thủ giờ giấc, nội quy, quy trình làm việc | ☑ | ☐ | ☐ |
+| 6 | **Tính cầu tiến** | Sẵn sàng nhận góp ý và cải thiện bản thân | ☑ | ☐ | ☐ |
+| 7 | **Giao tiếp** | Trình bày ý tưởng, báo cáo công việc rõ ràng | ☐ | ☑ | ☐ |
+| 8 | **Hợp tác nhóm** | Làm việc hiệu quả với đồng nghiệp, tham gia nhóm | ☐ | ☑ | ☐ |
+| 9 | **Ứng xử chuyên nghiệp** | Tôn trọng đồng nghiệp, đối tác, môi trường làm việc | ☑ | ☐ | ☐ |
+| 10 | **Tư duy giải quyết vấn đề** | Nhận diện vấn đề, đề xuất giải pháp, sáng tạo | ☐ | ☑ | ☐ |
+| 11 | **Đóng góp vào dự án/tổ chức** | Hiệu quả công việc, ý tưởng cải tiến, được nhóm ghi nhận | ☐ | ☑ | ☐ |
+| 12 | **Tổng thể** | Đánh giá chung về toàn bộ quá trình thực tập | ☐ | ☑ | ☐ |
 
 ### Cần cải thiện
 
